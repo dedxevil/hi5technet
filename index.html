@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="css/nivo-lightbox.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
     <header class="hero-area">
@@ -805,7 +811,7 @@
       </div>
     </section> -->
 
-    <section id="testimonial">
+    <!-- <section id="testimonial">
       <div class="testimonial-video section">
         <div class="container right-position">
           <div class="row">
@@ -948,7 +954,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="team" class="section">
       <div class="container">
@@ -972,7 +978,7 @@
           <div class="col-lg-3 col-md-6 col-xs-12 col-sm-10 mx-auto">
             <div class="single-team">
               <div class="team-thumb">
-                <img src="img/team/01.jpg" class="img-fluid" alt="" />
+                <img src="img/team/1.png" class="img-fluid" alt="" />
               </div>
               <div class="team-details">
                 <div class="team-social-icons">
@@ -999,7 +1005,7 @@
           <div class="col-lg-3 col-md-6 col-xs-12 col-sm-10 mx-auto">
             <div class="single-team">
               <div class="team-thumb">
-                <img src="img/team/02.jpg" class="img-fluid" alt="" />
+                <img src="img/team/2.png" class="img-fluid" alt="" />
               </div>
               <div class="team-details">
                 <div class="team-social-icons">
@@ -1026,7 +1032,7 @@
           <div class="col-lg-3 col-md-6 col-xs-12 col-sm-10 mx-auto">
             <div class="single-team">
               <div class="team-thumb">
-                <img src="img/team/03.jpg" class="img-fluid" alt="" />
+                <img src="img/team/3.png" class="img-fluid" alt="" />
               </div>
               <div class="team-details">
                 <div class="team-social-icons">
@@ -1053,7 +1059,7 @@
           <div class="col-lg-3 col-md-6 col-xs-12 col-sm-10 mx-auto">
             <div class="single-team">
               <div class="team-thumb">
-                <img src="img/team/04.jpg" class="img-fluid" alt="" />
+                <img src="img/team/4.png" class="img-fluid" alt="" />
               </div>
               <div class="team-details">
                 <div class="team-social-icons">
@@ -1244,12 +1250,12 @@
                   <div class="form-group">
                     <input
                       type="text"
-                      placeholder="Budget"
+                      placeholder="Phone"
                       id="budget"
                       class="form-control"
-                      name="budget"
+                      name="Phone"
                       required
-                      data-error="Please enter your Budget"
+                      data-error="Please enter your Phone Number"
                     />
                     <div class="help-block with-errors"></div>
                   </div>
@@ -1394,5 +1400,42 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?65432';
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = url;
+      var options = {
+      "enabled":true,
+      "chatButtonSetting":{
+          "backgroundColor":"#00e785",
+          "ctaText":"Chat with us",
+          "borderRadius":"25",
+          "marginLeft": "20",
+          "marginRight": "20",
+          "marginBottom": "20",
+          "ctaIconWATI":false,
+          "position":"left"
+      },
+      "brandSetting":{
+          "brandName":"Hi5 Technet",
+          "brandSubTitle":"undefined",
+          "brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+          "welcomeText":"Hi there!\nHow can I help you?",
+          "messageText":"Hello, %0A I have a question about {{page_link}}",
+          "backgroundColor":"#00e785",
+          "ctaText":"Chat with us",
+          "borderRadius":"25",
+          "autoShow":false,
+          "phoneNumber":"919944165028"
+      }
+      };
+      s.onload = function() {
+          CreateWhatsappChatWidget(options);
+      };
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+  </script>
   </body>
 </html>
