@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/wa.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -27,12 +28,22 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
+    <script src="wa-script.js"></script>
     <header class="hero-area">
       <div class="overlay">
         <span></span>
         <span></span>
       </div>
-
+      <div id="whatsapp-container">
+        <div id="whatsapp-label">Chat With Us</div>
+        <div id="whatsapp-options" class="hidden">
+            <button id="india-button">India</button>
+            <button id="outside-india-button">Outside India</button>
+        </div>
+        <a id="whatsapp-button" href="#" target="_blank">
+            <img src="img/whatsapp-animated.gif" alt="WhatsApp Chat">
+        </a>
+    </div>
       <div class="icon-bar">
         <a href="https://www.facebook.com/Hi5technet" class="facebook"><i class="fa fa-facebook"></i></a>
         <!-- <a href="#" class="twitter"><i class="fa fa-x-twitter"></i></a> -->
@@ -1491,7 +1502,7 @@ store.
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/main.js"></script>
-    <script>
+    <!-- <script>
       var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?65432';
       var s = document.createElement('script');
       s.type = 'text/javascript';
@@ -1527,6 +1538,6 @@ store.
       };
       var x = document.getElementsByTagName('script')[0];
       x.parentNode.insertBefore(s, x);
-  </script>
+  </script> -->
   </body>
 </html>

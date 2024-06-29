@@ -1,0 +1,67 @@
+/* Container for the floating WhatsApp button and label */
+#whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Label above the WhatsApp button */
+#whatsapp-label {
+  background-color: #25d366; /* WhatsApp green color */
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better appearance */
+  cursor: pointer;
+}
+
+/* Options for India and Outside India */
+#whatsapp-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+#whatsapp-options button {
+  background-color: #25d366; /* WhatsApp green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better appearance */
+  transition: background-color 0.3s ease;
+}
+
+#whatsapp-options button:hover {
+  background-color: #128c7e;
+}
+
+#whatsapp-options.visible {
+  max-height: 100px;
+  opacity: 1;
+}
+
+/* Styles for the floating WhatsApp button */
+#whatsapp-button img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
