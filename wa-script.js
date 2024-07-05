@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle button clicks
     indiaButton.addEventListener('click', () => {
-        window.open(`https://api.whatsapp.com/send?phone=${indianNumber}&text=Hello,%20%0A%20I%20have%20a%20a%20a%20question!`, '_blank');
+        window.open(`https://api.whatsapp.com/send?phone=${indianNumber}&text=Hey%20Hi5Technet,%20%0A%20I%20have%20a%20question!`, '_blank');
     });
 
     outsideIndiaButton.addEventListener('click', () => {
-        window.open(`https://api.whatsapp.com/send?phone=${internationalNumber}&text=Hello,%20%0A%20I%20have%20a%20a%20a%20question!`, '_blank');
+        window.open(`https://api.whatsapp.com/send?phone=${internationalNumber}&text=Hey%20Hi5Technet,%20%0A%20I%20have%20a%20question!`, '_blank');
     });
 });
